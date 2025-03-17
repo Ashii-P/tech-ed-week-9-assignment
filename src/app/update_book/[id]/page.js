@@ -14,9 +14,10 @@ export default async function Page({ params }) {
   const { id } = await params;
 
   const bookInfo = await data.query(`SELECT * FROM book WHERE id = $1`, [id]);
-  const genreInfo = await data.query(`SELECT * FROM book_genre WHERE id = $1`, [
-    id,
-  ]);
+  const genreInfo = await data.query(
+    `SELECT * FROM book_genres WHERE id = $1`,
+    [id]
+  );
   console.log(bookInfo);
 
   return (

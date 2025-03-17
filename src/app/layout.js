@@ -60,8 +60,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
-      <html lang="en">
+    <html lang="en">
+      <ClerkProvider>
         <body
           className={`${notoSerifDisplay.variable} ${libreBodoni.variable} ${windSong.variable} ${kohSantepheap.variable} ${pacifico.variable} ${delius.variable}`}
         >
@@ -82,7 +82,7 @@ export default function RootLayout({ children }) {
           </header>
           {children}
         </body>
-      </html>
-    </ClerkProvider>
+      </ClerkProvider>
+    </html>
   );
 }

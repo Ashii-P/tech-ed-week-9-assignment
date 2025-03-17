@@ -12,7 +12,7 @@ export default async function Page() {
 
   if (!userId) return redirectToSignIn();
   console.log(userInfo);
-  if (userInfo.rowCount == 0) {
+  if (userInfo.rowCount == 1) {
     return (
       <div>
         <BookForm />
